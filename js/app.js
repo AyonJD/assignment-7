@@ -160,6 +160,7 @@ const displayReportedPosts = () => {
   //Clearing reported previous field to counter the double adding problem | Bug fixed here
     document.getElementById("reported").innerHTML = '';
     const reportedPosts = getReportedPosts();
+    //Here should be reportedPosts but got posts here
     reportedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "reported" ).appendChild(div);
