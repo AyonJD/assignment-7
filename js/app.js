@@ -35,18 +35,21 @@ const displayContent = (text) => {
 const switchTab = (id) => {
     if (id === "posts") {
         document.getElementById( "posts" ).style.display = "grid";
+        document.getElementById( "qna-bonus" ).style.display = "block";
         document.getElementById( "liked" ).style.display = "none";
         document.getElementById( "reported" ).style.display = "none";
     } else if (id === "liked") {
         document.getElementById( "liked" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "reported" ).style.display = "none";
+        document.getElementById( "qna-bonus" ).style.display = "none";
 
         displayLikedPosts();
     } else {
         document.getElementById( "reported" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "liked" ).style.display = "none";
+        document.getElementById( "qna-bonus" ).style.display = "none";
 
         displayReportedPosts();
     }
@@ -140,7 +143,9 @@ const showPosts = (posts) => {
     const productsContainer = document.getElementById( "posts" );
     productsContainer.innerHTML = "";
 
-    posts.forEach((post) => {
+  //After reporting if we click the like button the reported post was coming back | bug solved
+    const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
+    remainingPosts.forEach((post) => {
         const div = createPost(post);
         productsContainer.appendChild(div);
     });
@@ -148,22 +153,22 @@ const showPosts = (posts) => {
 
 const displayLikedPosts = () => {
     //Clearing liked previous field to counter the double adding problem | Bug fixed here
-    document.getElementById("liked").innerHTML = '';
+    document.getElementById("licked-container").innerHTML = '';
     const likedPosts = getLikedPosts();
     likedPosts.forEach((post) => {
         const div = createPost(post);
-        document.getElementById( "liked" ).appendChild(div);
+        document.getElementById( "licked-container" ).appendChild(div);
     });
 };
 
 const displayReportedPosts = () => {
   //Clearing reported previous field to counter the double adding problem | Bug fixed here
-    document.getElementById("reported").innerHTML = '';
+    document.getElementById("report-container").innerHTML = '';
     const reportedPosts = getReportedPosts();
     //Here should be reportedPosts but got posts here
     reportedPosts.forEach((post) => {
         const div = createPost(post);
-        document.getElementById( "reported" ).appendChild(div);
+        document.getElementById( "report-container" ).appendChild(div);
     });
 };
 
