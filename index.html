@@ -96,7 +96,7 @@
                     </button>
                   </h2>
                   <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">To know how JavaScript works will have to know how the DOM(Document object model) and web browser works. First, the browser will grab everything linked with the HTML file. The web browser will load all the HTML and CSS files and after that, the browser JavaScript engine will load the JavaScript file and execute them one by one from the top to bottom. The order is important here. If the JavaScript wouldn't wait for the HTML and CSS to execute it wouldn't able to change the DOM elements.</div>
+                    <div class="accordion-body">To know how JavaScript works will have to know how the DOM(Document object model) and web browser works. First, the browser will grab everything linked with the HTML file. The web browser will load all the HTML and CSS files and after that, the browser JavaScript engine(V8 engine) will load the JavaScript file and execute them one by one from the top to bottom. The order is important here. If the JavaScript wouldn't wait for the HTML and CSS to execute it wouldn't able to change the DOM elements.</div>
                   </div>
                 </div>
                 <div class="accordion-item">
@@ -106,7 +106,7 @@
                     </button>
                   </h2>
                   <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    <div class="accordion-body">To know the Event Loop better we must need to have some knowledge on Heap, Stack, and Callback Queue. JavaScript is a single-thread language with a single call stack and a single memory heap. Simply heap is the place where JavaScript stores the variable value. As it's a single-thread language, it reads the code one by one. It'll execute the synchronous functions and codes from the stack first and will put the asynchronous callback, web API to Queue. After executing all the codes from the stack it'll start to execute the codes one by one from Queue. This process is like a loop. And this full process is called Event Loop.</div>
                   </div>
                 </div>
                 <div class="accordion-item">
@@ -117,21 +117,33 @@
                   </h2>
                   <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                        <table class="table table-bordered border-info table-striped table-hover">
+                        <table class="table table-bordered border-primary table-striped table-hover">
                             <thead>
                               <tr>
-                                <th scope="col" class="text-center">Local Storage</th>
-                                <th scope="col" class="text-center">Session Storage</th>
+                                <th scope="col" class="text-center w-50">Local Storage</th>
+                                <th scope="col" class="text-center w-50">Session Storage</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
-                                <td>Mark</td>
-                                <td>Otto</td>
+                                <td>Local Storage size is 10MB.</td>
+                                <td>Session Storage size is 5MB.</td>
                               </tr>
                               <tr>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
+                                <td>Local Storage stores data as string.</td>
+                                <td>Session Storage also stores data as string.</td>
+                              </tr>
+                              <tr>
+                                <td>Local Storage data will not work only for one tab, it'll work for all the tabs in the browser.</td>
+                                <td>Session Storage data will work only for the particular tab.</td>
+                              </tr>
+                              <tr>
+                                <td>The data of Local Storage will not be removed if the browser is clossed.</td>
+                                <td>The data of Session Storage will be removed if the browser is clossed.</td>
+                              </tr>
+                              <tr>
+                                <td>Local Storage can be cleared by the users.</td>
+                                <td>Session Storage will be cleared once the browser or that particular tab is closed. Reloading can't delete the Session Storage data.</td>
                               </tr>
                             </tbody>
                           </table>
