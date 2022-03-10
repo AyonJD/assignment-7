@@ -53,7 +53,7 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
-    //User image was missing here | Bug fixed here
+    //User image was missing here | Bug(user image, user name and user comment) fixed here
     const userImage = post.userImage;
     const image = post.image;
     const div = document.createElement( "article" );
@@ -147,6 +147,8 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+    //Clearing liked previous field to counter the double adding problem | Bug fixed here
+    document.getElementById("liked").innerHTML = '';
     const likedPosts = getLikedPosts();
     likedPosts.forEach((post) => {
         const div = createPost(post);
