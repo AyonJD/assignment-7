@@ -92,25 +92,17 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                      <strong>How does Javascript work?</strong>
+                      <strong>How does JavaScript work?</strong>
                     </button>
                   </h2>
                   <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Before writing JavaScript it's important to know how it works under the hood. There are two important pieces to learn about: How the web browser works, and the Document Object Model (DOM). The web browser loads a web page, parses the HTML, and creates what is known as a Document Object Model (DOM) from the contents. The DOM presents a live view of the web page to your JavaScript code.
-
-                        The browser will then grab everything linked to the HTML, like images and CSS files. The CSS information comes from the CSS parser.
-                        
-                        The HTML and CSS are put together by the DOM to create the web page first. Then, the browsers' JavaScript engine loads JavaScript files and inline code but does not run the code immediately. It waits for the HTML and CSS to finish loading.
-                        
-                        Once this is done, the JavaScript is executed in the order the code is written. This results in the DOM being updated by JavaScript code and rendered by the browser.
-                        
-                        The order here is important. If the JavaScript did not wait for the HTML and CSS to finish, it would not be able to change the DOM elements.</div>
+                    <div class="accordion-body">To know how JavaScript works will have to know how the DOM(Document object model) and web browser works. First, the browser will grab everything linked with the HTML file. The web browser will load all the HTML and CSS files and after that, the browser JavaScript engine will load the JavaScript file and execute them one by one from the top to bottom. The order is important here. If the JavaScript wouldn't wait for the HTML and CSS to execute it wouldn't able to change the DOM elements.</div>
                   </div>
                 </div>
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                      Accordion Item #2
+                      <strong>What does JavaScript event loop do?</strong>
                     </button>
                   </h2>
                   <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
@@ -120,11 +112,30 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="flush-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                      Accordion Item #3
+                      <strong>What is the difference between Local Storage and Session Storage?</strong>
                     </button>
                   </h2>
                   <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    <div class="accordion-body">
+                        <table class="table table-bordered border-info table-striped table-hover">
+                            <thead>
+                              <tr>
+                                <th scope="col" class="text-center">Local Storage</th>
+                                <th scope="col" class="text-center">Session Storage</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                              </tr>
+                              <tr>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
                   </div>
                 </div>
               </div>
