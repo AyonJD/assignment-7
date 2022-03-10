@@ -16,6 +16,7 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
+    //Got a Spelling mistake for push | Bug fixed here
     likedPostsId.push(id); 
     showPosts(posts);
 };
@@ -27,6 +28,7 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
+    // Desplaying text < 30 char default | Bug fixed here
     return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
@@ -51,6 +53,7 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
+    //User image was missing here | Bug fixed here
     const userImage = post.userImage;
     const image = post.image;
     const div = document.createElement( "article" );
@@ -152,8 +155,10 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
+  //Clearing reported previous field to counter the double adding problem | Bug fixed here
+    document.getElementById("reported").innerHTML = '';
     const reportedPosts = getReportedPosts();
-    posts.forEach((post) => {
+    reportedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "reported" ).appendChild(div);
     });
